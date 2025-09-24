@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ReservaBook</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">ReservaBook</div>
+  <nav id="menu">
+    <button onclick="irPara('home')">Início</button>
+    <button id="adminBtn" onclick="irPara('admin')">Admin</button>
+  </nav>
+</header>
+
+<main>
+
+  <section id="home" class="pagina active">
+    <img src="imagem/isa.png" alt="Logo ReservaBook" class="logo-home">
+    <h1>Bem-vindo ao ReservaBook</h1>
+    <p>Reserve notebooks de forma rápida e prática.</p>
+    <button onclick="irPara('login')">Login Usuário</button>
+  </section>
+
+  <section id="login" class="pagina">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="text" id="usuario" placeholder="RA" required>
+      <input type="password" id="senha" placeholder="Senha" required>
+      <button type="submit">Entrar</button>
+    </form>
+    <p class="erro-msg" id="erroLogin"></p>
+    <p style="text-align:center; margin-top:10px;">
+      <button class="link-button" onclick="irPara('cadastro')">Criar Conta</button>
+    </p>
+  </section>
+
+  <section id="cadastro" class="pagina">
+    <h2>Criar Conta</h2>
+    <form id="cadForm">
+      <input type="text" id="cad-usuario" placeholder="Coloque seu RA" required>
+      <input type="password" id="cad-senha" placeholder="Escolha uma senha" required>
+      <button type="submit">Cadastrar</button>
+    </form>
+    <p class="erro-msg" id="erroCad"></p>
+  </section>
+
+  <section id="reservas" class="pagina">
+    <h2>Fazer Reserva</h2>
+    <form id="reservaForm">
+      <input type="text" placeholder="Seu nome" required>
+      <input type="date" required>
+      <select required>
+        <option value="">Selecione o notebook</option>
+      </select>
+      <button type="submit">Reservar</button>
+    </form>
+    <ul class="lista-reservas" id="listaReservas"></ul>
+  </section>
+
+  <section id="cancelar" class="pagina">
+    <h2>Cancelar Reserva</h2>
+    <ul class="lista-reservas" id="listaCancelar"></ul>
+  </section>
+
+  <section id="feedback" class="pagina">
+    <h2>Deixe seu Feedback</h2>
+    <form id="feedbackForm">
+      <textarea placeholder="Escreva sua opinião..." rows="5" required></textarea>
+      <div class="estrelas">
+        <span class="star" data-value="1">&#9733;</span>
+        <span class="star" data-value="2">&#9733;</span>
+        <span class="star" data-value="3">&#9733;</span>
+        <span class="star" data-value="4">&#9733;</span>
+        <span class="star" data-value="5">&#9733;</span>
+      </div>
+      <button type="submit">Enviar Feedback</button>
+    </form>
+    <p id="msgFeedback"></p>
+  </section>
+
+  <section id="admin" class="pagina">
+    <h2>Área do Administrador</h2>
+    <form id="adminForm">
+      <input type="password" id="adminPass" placeholder="Senha única do Admin" required>
+      <button type="submit">Entrar</button>
+    </form>
+    <div id="adminArea" class="hidden">
+      <h3>Reservas Cadastradas</h3>
+      <ul class="lista-reservas" id="adminReservas"></ul>
+
+      <h3>Feedbacks dos Usuários</h3>
+      <ul class="lista-reservas" id="adminFeedbacks"></ul>
+    </div>
+    <p class="erro-msg" id="erroAdmin"></p>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 ReservaBook - Todos os direitos reservados</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

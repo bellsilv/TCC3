@@ -1,0 +1,2 @@
+- [x] Adicionar tag <img> para a logo acima do cabeçalho em index.html
+- [x] Adicionar estilo CSS para .logo-top em style.css

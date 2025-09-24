@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #74ebd5, #9face6);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+}
+
+header {
+  background: rgba(26, 45, 80, 0.95);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+
+nav button {
+  background: transparent;
+  border: none;
+  color: #a8c0ff;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav button:hover {
+  color: #fff;
+}
+
+main {
+  flex-grow: 1;
+  padding: 30px 20px;
+  max-width: 600px;
+  margin: 30px auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.pagina {
+  display: none;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.pagina.active {
+  display: block;
+}
+
+h1, h2, h3 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #1a2d50;
+}
+
+p {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+button, .link-button {
+  width: 100%;
+  padding: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+button {
+  background: #1a2d50;
+  color: white;
+}
+
+button:hover {
+  background: #152740;
+  box-shadow: 0 6px 15px rgba(21, 39, 64, 0.6);
+}
+
+.link-button {
+  background: transparent;
+  color: #1a2d50;
+  text-decoration: underline;
+  margin-top: 12px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #1a2d50;
+  box-shadow: 0 0 8px rgba(26, 45, 80, 0.5);
+}
+
+.lista-reservas {
+  list-style: none;
+  padding: 10px;
+  max-height: 250px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.lista-reservas li {
+  padding: 8px 12px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lista-reservas li:last-child {
+  border-bottom: none;
+}
+
+.lista-reservas button {
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.lista-reservas button:hover {
+  background: #c0392b;
+}
+
+footer {
+  background: #1a2d50;
+  color: #a8c0ff;
+  text-align: center;
+  padding: 15px;
+}
+
+.logo-home {
+  width: 150px;
+  display: block;
+  margin: 0 auto 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+.estrelas {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.star {
+  font-size: 2rem;
+  cursor: pointer;
+  color: gray;
+  transition: 0.2s;
+}
+
+.star.selecionada,
+.star:hover,
+.star:hover ~ .star {
+  color: gold;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
